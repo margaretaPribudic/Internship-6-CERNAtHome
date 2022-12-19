@@ -27,11 +27,6 @@ CREATE TABLE Professions(
 	Name VARCHAR(30) NOT NULL
 )
 
-CREATE TABLE Cities(
-	CityId SERIAL PRIMARY KEY,
-	Name VARCHAR(30) NOT NULL
-)
-
 CREATE TABLE States(
 	StateId SERIAL PRIMARY KEY,
 	Name VARCHAR(30) NOT NULL,
@@ -39,16 +34,16 @@ CREATE TABLE States(
 	PPPPerCapita FLOAT
 )
 
-CREATE TABLE StatesCities(
-	StateCityId SERIAL PRIMARY KEY,
-	StateId INT REFERENCES States(StateId),
-	CityId INT REFERENCES Cities(CityId)
+CREATE TABLE Cities(
+	CityId SERIAL PRIMARY KEY,
+	Name VARCHAR(30) NOT NULL,
+	StateId INT REFERENCES States(StateId)
 )
 
 CREATE TABLE Hotels(
 	HotelId SERIAL PRIMARY KEY,
 	Name VARCHAR(30) NOT NULL,
-	StateCityId INT REFERENCES StatesCities(StateCityId)
+	CityId INT REFERENCES Cities(CityId)
 )
 
 CREATE TABLE Scientists(
