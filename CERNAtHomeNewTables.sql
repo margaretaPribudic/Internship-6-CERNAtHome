@@ -67,3 +67,8 @@ CREATE TABLE ScientistsScientificWork(
 	PRIMARY KEY(ScientistId,ScientificWorkId)
 )
 
+ALTER TABLE Scientists
+	ADD CONSTRAINT SexOptions CHECK(Sex IN ('MUŠKO','ŽENSKO','NEPOZNATO','OSTALO'))
+	
+ALTER TABLE Professions
+	ADD CONSTRAINT ProfessionOptions CHECK(Name IN('programer','fizičar','inženjer','znanstvenik materijala'))
