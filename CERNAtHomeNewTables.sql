@@ -68,3 +68,13 @@ ALTER TABLE Scientists
 	
 ALTER TABLE Professions
 	ADD CONSTRAINT ProfessionOptions CHECK(Name IN('programer','fizičar','inženjer','znanstvenik materijala'))
+
+ALTER TABLE Professions
+	ADD CONSTRAINT UniqueName UNIQUE(Name)
+	
+ALTER TABLE States
+	ADD CONSTRAINT UniqueState UNIQUE(Name)
+	
+ALTER TABLE Cities
+	ADD CONSTRAINT UniqueCity UNIQUE(Name)
+	
