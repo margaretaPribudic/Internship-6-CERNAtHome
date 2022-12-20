@@ -113,6 +113,8 @@ INSERT INTO AcceleratorsProjects(AcceleratorId, ProjectId) VALUES
 
 
 INSERT INTO ScientificWorks(Name,DateOfPublication,NumberOfQuotes,ProjectId) VALUES
+	('Znanstveni rad 15','2021-07-01',4,7),
+	('Znanstveni rad 16','2022-03-01',2,8),
 	('Znanstveni rad 1','2010-01-01',3,1),
 	('Znanstveni rad 2','2010-10-01',2,1),
 	('Znanstveni rad 3','2016-01-01',5,2),
@@ -156,6 +158,8 @@ INSERT INTO Hotels(Name,CityId) VALUES
 
 
 INSERT INTO Scientists(FirstName,LastName,BirthDate,Sex,StateId,ProfessionId,HotelId) VALUES
+	('Maura','Russo','1978-01-02','ŽENSKO',5,1,4),
+	('Paul','Muller','1980-03-02','MUŠKO',3,1,5),
 	('Mate','Matic','1983-01-02','MUŠKO',2,1,1),
 	('Antea','Antic','1984-02-20','ŽENSKO',2,2,2),
 	('Hrvoje','Horvat','1990-01-02','NEPOZNATO',3,3,3),
