@@ -48,7 +48,8 @@ CREATE TABLE Hotels(
 
 CREATE TABLE Scientists(
 	ScientistId SERIAL PRIMARY KEY,
-	Name VARCHAR(30) NOT NULL,
+	FirstName VARCHAR(30) NOT NULL,
+	LastName VARCHAR(30) NOT NULL,
 	BirthDate TIMESTAMP,
 	Sex VARCHAR(30),
 	StateId INT REFERENCES States(StateId),
